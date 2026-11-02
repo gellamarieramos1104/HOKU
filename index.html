@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HOKU Crafts</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <!-- logo to open side panel -->
+    <a class="logo" href="#sidebar" title="Open menu">H<span class="red">O</span>KU<small>CRAFTS</small></a>
+
+    <nav>
+      <a class="nav-btn" href="#home">Home</a>
+      <a class="nav-btn" href="#patterns">Free Crochet Patterns</a>
+      <a class="nav-btn" href="#store">Store</a>
+      <a class="nav-btn" href="#about">About</a>
+      <a class="nav-btn" href="#community">The Crochet Community</a>
+    </nav>
+
+    <!-- Logged OUT: the profile button goes to the login page -->
+    <a class="profile-btn" href="login.html">&#128100; Log in</a>
+  </header>
+
+  <main>
+
+    <!-- ================= HOME ================= -->
+    <section id="home" class="page">
+      <!-- Hidden radio buttons remember which slide is showing -->
+      <input type="radio" name="slide" id="slide-1" class="slide-radio" checked>
+      <input type="radio" name="slide" id="slide-2" class="slide-radio">
+      <input type="radio" name="slide" id="slide-3" class="slide-radio">
+
+      <div class="carousel">
+        <div class="slides">
+          <div class="slide">
+            <label class="slide-pick" for="slide-1" title="Show this slide"></label>
+            <img class="img" src="petwear.jpg" alt="New Pet Wear">
+            <h2>NEW: Pet Wear</h2>
+            <a class="btn" href="#headwear">Shop Now</a>
+          </div>
+          <div class="slide">
+            <label class="slide-pick" for="slide-2" title="Show this slide"></label>
+            <img class="img" src="froggyhat.jpg" alt="Froggy Bucket Hat">
+            <h2>Froggy Bucket Hat</h2>
+            <a class="btn" href="#headwear">Shop Now</a>
+          </div>
+          <div class="slide">
+            <label class="slide-pick" for="slide-3" title="Show this slide"></label>
+            <img class="img" src="flwrbandana.jpg" alt="Flower Bandana">
+            <h2>Flower Bandanas</h2>
+            <a class="btn" href="#headwear">Shop Now</a>
+          </div>
+        </div>
+
+        <!-- One pair of arrows per slide; CSS shows only the pair for the current slide -->
+        <div class="arrows arrows-1">
+          <label class="arrow arrow-prev" for="slide-3">&#10094;</label>
+          <label class="arrow arrow-next" for="slide-2">&#10095;</label>
+        </div>
+        <div class="arrows arrows-2">
+          <label class="arrow arrow-prev" for="slide-1">&#10094;</label>
+          <label class="arrow arrow-next" for="slide-3">&#10095;</label>
+        </div>
+        <div class="arrows arrows-3">
+          <label class="arrow arrow-prev" for="slide-2">&#10094;</label>
+          <label class="arrow arrow-next" for="slide-1">&#10095;</label>
+        </div>
+      </div>
+
+      <div class="dots">
+        <label class="dot" for="slide-1"></label>
+        <label class="dot" for="slide-2"></label>
+        <label class="dot" for="slide-3"></label>
+      </div>
+    </section>
+
+    <!-- ================= FREE PATTERNS ================= -->
+    <section id="patterns" class="page">
+      <h1>Free Crochet Patterns</h1>
+
+      <div class="grid">
+        <div class="card left">
+          <img class="img" src="minishroom.png" alt="Amigurumi Bunny">
+          <h3></h3>
+          <p><b>Level:</b> Beginner</p>
+          <details class="pattern">
+            <summary class="btn small"><span class="show-text">View pattern</span><span class="hide-text">Hide pattern</span></summary>
+            <p class="info">A small bunny made with single crochet in the round.</p>
+          </details>
+        </div>
+
+        <div class="card left">
+          <img class="img" src="froghat.jpeg" alt="Froggy Bucket Hat">
+          <h3>Froggy Bucket Hat</h3>
+          <p><b>Level:</b> Intermediate</p>
+          <details class="pattern">
+            <summary class="btn small"><span class="show-text">View pattern</span><span class="hide-text">Hide pattern</span></summary>
+            <p class="info">A cute bucket hat with little frog eyes on top.</p>
+          </details>
+        </div>
+
+        <div class="card left">
+          <img class="img" src="floralbandana.jpeg" alt="Granny Square Bandana">
+          <h3>Granny Square Bandana</h3>
+          <p><b>Level:</b> Intermediate</p>
+          <details class="pattern">
+            <summary class="btn small"><span class="show-text">View pattern</span><span class="hide-text">Hide pattern</span></summary>
+            <p class="info">A flower granny square bandana you can tie on.</p>
+          </details>
+        </div>
+
+        <div class="card left">
+          <img class="img" src="minibokey.jpeg" alt="Mini Bouquet">
+          <h3>Mini Bouquet</h3>
+          <p><b>Level:</b> Beginner</p>
+          <details class="pattern">
+            <summary class="btn small"><span class="show-text">View pattern</span><span class="hide-text">Hide pattern</span></summary>
+            <p class="info">Everlasting flowers made from simple stitches.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STORE ================= -->
+    <section id="store" class="page">
+
+      <!-- Category list (hidden while a product group is open) -->
+      <div id="categories">
+        <h1>Shop By Category</h1>
+        <div class="grid">
+          <a class="card clickable" href="#keychains">
+            <img class="img" src="cstmkeychain.png" alt="Custom Keychains">
+            <p>Custom Keychains</p>
+          </a>
+          <a class="card clickable" href="#headwear">
+            <img class="img" src="headwear.png" alt="Head-wear">
+            <p>Head-wear</p>
+          </a>
+          <a class="card clickable" href="#dolls">
+            <img class="img" src="cstmdoll.jpg" alt="Custom Dolls">
+            <p>Custom Dolls</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Products (one group per category; only the one in the link shows) -->
+      <div class="product-group" id="keychains">
+        <a class="btn small back-btn" href="#store">&larr; Back to categories</a>
+        <h1>Custom Keychains</h1>
+        <div class="grid">
+          <div class="card"><img class="img" src="keychain2.jpeg" alt="Strawberry Bunny Keychain"><p>Strawberry Bunny Keychains</p><label class="btn small add-btn"><input type="checkbox"><span class="add-text">Add to inquiry</span><span class="added-text">Added ✓</span></label></div>
+          <div class="card"><img class="img" src="keychain1.jpeg" alt="Pokemon Keychain"><p>Pokemon Keychains</p><label class="btn small add-btn"><input type="checkbox"><span class="add-text">Add to inquiry</span><span class="added-text">Added ✓</span></label></div>
+          <div class="card"><img class="img" src="keychain3.jpeg" alt="Mini Character Keychain"><p>Mini Character Keychains</p><label class="btn small add-btn"><input type="checkbox"><span class="add-text">Add to inquiry</span><span class="added-text">Added ✓</span></label></div>
+        </div>
+      </div>
+
+      <div class="product-group" id="headwear">
+        <a class="btn small back-btn" href="#store">&larr; Back to categories</a>
+        <h1>Head-wear</h1>
+        <div class="grid">
+          <div class="card"><img class="img" src="froggyhat.jpg" alt="Froggy Bucket Hat"><p>Froggy Bucket Hat</p><label class="btn small add-btn"><input type="checkbox"><span class="add-text">Add to inquiry</span><span class="added-text">Added ✓</span></label></div>
+          <div class="card"><img class="img" src="floralbandana.jpeg" alt="Flower Bandana"><p>Flower Bandana</p><label class="btn small add-btn"><input type="checkbox"><span class="add-text">Add to inquiry</span><span class="added-text">Added ✓</span></label></div>
+          <div class="card"><img class="img" src="ptwear.jpg" alt="Pet Wear Ruffle Hat"><p>Pet Wear Ruffle Hat</p><label class="btn small add-btn"><input type="checkbox"><span class="add-text">Add to inquiry</span><span class="added-text">Added ✓</span></label></div>
+        </div>
+      </div>
+
+      <div class="product-group" id="dolls">
+        <a class="btn small back-btn" href="#store">&larr; Back to categories</a>
+        <h1>Custom Dolls</h1>
+        <div class="grid">
+          <div class="card"><img class="img" src="doll3.jpeg" alt="Flower Crown Doll"><p>Flower Crown Doll</p><label class="btn small add-btn"><input type="checkbox"><span class="add-text">Add to inquiry</span><span class="added-text">Added ✓</span></label></div>
+          <div class="card"><img class="img" src="doll1.jpeg" alt="Pink Dress Doll"><p>Couple Spiderverse Doll</p><label class="btn small add-btn"><input type="checkbox"><span class="add-text">Add to inquiry</span><span class="added-text">Added ✓</span></label></div>
+          <div class="card"><img class="img" src="doll2.jpeg" alt="White Dress Doll"><p>Anime Doll</p><label class="btn small add-btn"><input type="checkbox"><span class="add-text">Add to inquiry</span><span class="added-text">Added ✓</span></label></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="page">
+      <div class="about">
+        <img class="img tall" src="pretty.jpeg" alt="Trish photo">
+        <div>
+          <h1>Hey, I'm Trish!</h1>
+          <p>I am an Industrial Engineering student with a deep passion for creating art through crochet. Growing up, I always found ways to express myself through different mediums, whether it was drawing, painting, or embroidery. Hoku Crafts grew out of that same creative spark, serving as my personal outlet to explore, design, and share my love for handcrafted art.</p>
+          <p>Our philosophy is simple: <b><i>Never lose your whimsy</i></b>.</p>
+          <p>From cute small knick-knacks and plushies to stylish bucket hats and everlasting mini bouquets, every piece we make is entirely handmade with care, precision, and a whole lot of love. Whether you are looking for a personalized gift, a custom accessory, or a charming keepsake, Hoku Crafts is here to bring a touch of handmade joy into your everyday life.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= COMMUNITY ================= -->
+    <section id="community" class="page">
+      <h1>Welcome to the crochet community</h1>
+      <p class="center">Everything you need to start hooking, keep learning, and meet other people who love making things with yarn.</p>
+      <p class="center">Crochet is a craft where you use a single hook to pull loops of yarn through each other to build fabric. It's portable, forgiving, and easy to begin with just a few supplies.</p>
+
+      <div class="grid six">
+        <div class="card left"><div class="icon">🪝</div><h3>Crochet hook</h3><p>Try a 5 mm (H-8) hook to begin. Soft ergonomic handles help tired hands.</p></div>
+        <div class="card left"><div class="icon">🧵</div><h3>Yarn</h3><p>Choose a smooth, light-colored worsted weight yarn so stitches are easy to see.</p></div>
+        <div class="card left"><div class="icon">✂️</div><h3>Scissors</h3><p>Small, sharp scissors for trimming ends neatly.</p></div>
+        <div class="card left"><div class="icon">🪡</div><h3>Yarn needle</h3><p>A blunt, large-eyed needle for weaving in ends and sewing pieces together.</p></div>
+        <div class="card left"><div class="icon">📍</div><h3>Stitch markers</h3><p>Mark the start of a round or a tricky spot. A safety pin works too.</p></div>
+     </div>
+
+      <h2>Basic stitches and abbreviations</h2>
+      <p>Patterns use short abbreviations. These are the ones you'll see most. Tap a group to filter.</p>
+
+      <!-- Filter buttons (radio buttons styled as pills) -->
+      <div class="filters">
+        <input type="radio" name="stitch-filter" id="f-all" checked><label for="f-all">All</label>
+        <input type="radio" name="stitch-filter" id="f-starter"><label for="f-starter">Starter stitches</label>
+        <input type="radio" name="stitch-filter" id="f-tall"><label for="f-tall">Taller stitches</label>
+        <input type="radio" name="stitch-filter" id="f-shaping"><label for="f-shaping">Shaping</label>
+        <input type="radio" name="stitch-filter" id="f-terms"><label for="f-terms">Pattern words</label>
+      </div>
+
+      <table>
+        <thead>
+          <tr><th>Abbr.</th><th>Stitch</th><th>What it does</th></tr>
+        </thead>
+        <tbody id="stitch-table">
+          <tr data-group="starter"><td>ch</td><td>Chain</td><td>The foundation. Each loop pulled through the one before it.</td></tr>
+          <tr data-group="starter"><td>sl st</td><td>Slip stitch</td><td>Joins rounds or moves yarn across without adding height.</td></tr>
+          <tr data-group="starter"><td>sc</td><td>Single crochet</td><td>A short, dense stitch. Great for amigurumi and sturdy fabric.</td></tr>
+          <tr data-group="tall"><td>hdc</td><td>Half double crochet</td><td>A middle height with a soft, quick fabric.</td></tr>
+          <tr data-group="tall"><td>dc</td><td>Double crochet</td><td>A taller stitch. Fast to work and drapes nicely.</td></tr>
+          <tr data-group="tall"><td>tr</td><td>Treble crochet</td><td>Extra tall for lacy, open fabric.</td></tr>
+          <tr data-group="shaping"><td>inc</td><td>Increase</td><td>Two stitches in the same space to add width.</td></tr>
+          <tr data-group="shaping"><td>dec</td><td>Decrease</td><td>Two stitches worked together to reduce width.</td></tr>
+          <tr data-group="terms"><td>st(s)</td><td>Stitch(es)</td><td>The loops that make up your fabric.</td></tr>
+          <tr data-group="terms"><td>rep</td><td>Repeat</td><td>Do the sequence again as many times as stated.</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Friendly tips</h2>
+      <div class="grid four">
+        <div class="card left"><h3>Count your stitches</h3><p>Count at the end of every row to catch mistakes early.</p></div>
+        <div class="card left"><h3>Relax your grip</h3><p>Tight stitches make hands sore and fabric stiff.</p></div>
+        <div class="card left"><h3>It's okay to frog</h3><p>"Frogging" (rip it, rip it) means unraveling mistakes. Every maker does it.</p></div>
+        <div class="card left"><h3>Take breaks</h3><p>Stretch your wrists and shoulders every half hour.</p></div>
+      </div>
+
+      <p class="center small-text">Made with love and a little yarn 🧶 · Crochet Corner community guide</p>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div>
+      <h3>Hoku Crafts</h3>
+      <p>Welcome to this creative space where you can <a href="#community">learn how to crochet</a> or enhance your skills. This website is packed full of hints, tips, tutorials and inspiration for all skill levels.</p>
+      <div class="social">
+        <a href="mailto:quilantangtrish@gmail.com" title="Email">&#9993;</a>
+        <a href="https://www.facebook.com/hokucrafts" target="_blank" title="Facebook">f</a>
+        <a href="http://www.tiktok.com/@hoku_crafts" target="_blank" title="TikTok">♪</a>
+      </div>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <!-- popovertarget opens the matching pop-up -->
+      <button class="link-btn" popovertarget="privacy">Privacy policy</button><br>
+      <button class="link-btn" popovertarget="terms">Terms &amp; conditions</button><br>
+      <button class="link-btn" popovertarget="shipping">Shipping &amp; returns</button><br>
+      <button class="link-btn" popovertarget="contact">Contact</button>
+    </div>
+
+    <div>
+      <h3>News Letter</h3>
+      <p>Join my newsletter for real time updates and crochet inspiration!</p>
+      <!-- Submitting jumps to #newsletter-msg, which CSS then shows -->
+      <form id="newsletter" action="#newsletter-msg">
+        <input type="email" id="email" placeholder="Your email" required>
+        <button class="btn small" type="submit">Join</button>
+      </form>
+      <p id="newsletter-msg">Thanks for subscribing!</p>
+    </div>
+  </footer>
+
+  <!-- ================= POP-UPS (opened by the Quick Links) ================= -->
+  <div class="modal-box" id="privacy" popover>
+    <button class="modal-close" popovertarget="privacy" popovertargetaction="hide">&times;</button>
+    <h2>Privacy Policy</h2>
+    <p>We only use your email to send newsletters. We never sell or share your information.</p>
+  </div>
+
+  <div class="modal-box" id="terms" popover>
+    <button class="modal-close" popovertarget="terms" popovertargetaction="hide">&times;</button>
+    <h2>Terms &amp; Conditions</h2>
+    <p>All items are handmade to order. Colors may vary slightly from photos.</p>
+  </div>
+
+  <div class="modal-box" id="shipping" popover>
+    <button class="modal-close" popovertarget="shipping" popovertargetaction="hide">&times;</button>
+    <h2>Shipping &amp; Returns</h2>
+    <p>Orders ship within 5-7 days. Custom items are non-refundable, but contact us if there is a problem.</p>
+  </div>
+
+  <div class="modal-box" id="contact" popover>
+    <button class="modal-close" popovertarget="contact" popovertargetaction="hide">&times;</button>
+    <h2>Contact</h2>
+    <p>Email: quilantangtrish@gmail.com<br>Facebook : @hoku crafts</p>
+  </div>
+
+  <!-- Profile pop-up: login.html sends you to index.html#profile, which opens this -->
+  <div class="modal" id="profile">
+    <a class="modal-backdrop" href="#close" aria-label="Close"></a>
+    <div class="modal-box">
+      <a class="modal-close" href="#close">&times;</a>
+      <h2>My Profile</h2>
+      <div class="profile-card">
+        <div class="avatar">&#128100;</div>
+        <p class="profile-hello">You're logged in!</p>
+        <p>Welcome to HOKU Crafts. Happy crocheting!</p>
+        <a class="btn small" href="login.html">Log out</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SIDE PANEL (opened by the logo) ================= -->
+  <a class="overlay" href="#close" aria-label="Close menu"></a>
+
+  <aside id="sidebar" class="sidebar">
+    <a class="sidebar-close" href="#close">&times;</a>
+    <h2>H<span class="red">O</span>KU Menu</h2>
+
+    <h3>Navigation</h3>
+    <a class="side-link" href="#home">Home</a>
+    <a class="side-link" href="#patterns">Free Crochet Patterns</a>
+    <a class="side-link" href="#store">Store</a>
+    <a class="side-link" href="#about">About</a>
+    <a class="side-link" href="#community">The Crochet Community</a>
+
+    <h3>Settings</h3>
+    <label class="setting">
+      <span>Dark mode</span>
+      <input type="checkbox" id="dark-toggle">
+    </label>
+    <div class="setting">
+      <span>Text size</span>
+      <div class="sizes">
+        <input type="radio" name="text-size" id="size-small"><label class="size-btn" for="size-small">A-</label>
+        <input type="radio" name="text-size" id="size-normal" checked><label class="size-btn" for="size-normal">A</label>
+        <input type="radio" name="text-size" id="size-large"><label class="size-btn" for="size-large">A+</label>
+      </div>
+    </div>
+  </aside>
+
+</body>
+</html>
