@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log In · HOKU Crafts</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .login-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+    .login-logo {
+      font-size: 2.2em;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-decoration: none;
+      color: inherit;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .login-logo small { display: block; font-size: 0.4em; letter-spacing: 6px; }
+    .login-logo .red { color: #e74c3c; }
+    .login-box {
+      width: 100%;
+      max-width: 380px;
+      padding: 28px;
+      border-radius: 14px;
+      background: #fff;
+      color: #222;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+      box-sizing: border-box;
+    }
+    .login-box h1 { margin: 0 0 4px; text-align: center; }
+    .login-box .subtitle { margin: 0 0 18px; text-align: center; color: #666; }
+    .login-form { display: flex; flex-direction: column; gap: 6px; }
+    .login-form label { font-weight: bold; font-size: 0.9em; margin-top: 8px; }
+    .login-form input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font: inherit;
+    }
+    .login-form .btn { margin-top: 16px; width: 100%; }
+    /* Red border on a field the browser says is filled in wrong */
+    .login-form input:user-invalid { border-color: #c0392b; }
+    .back-link { display: block; margin-top: 16px; text-align: center; color: inherit; }
+  </style>
+</head>
+<body>
+
+  <div class="login-page">
+    <a class="login-logo" href="index.html">H<span class="red">O</span>KU<small>CRAFTS</small></a>
+
+    <div class="login-box">
+      <h1>Log In</h1>
+      <p class="subtitle">Welcome back! Log in to see your profile.</p>
+
+      <!-- No JavaScript: the browser checks the fields (required, email, 6+ characters),
+           then the form goes to account.html (the logged-in version of the site) and opens "My Profile".
+           The inputs have no "name", so nothing you type ends up in the web address. -->
+      <form id="login-form" class="login-form" action="account.html#profile" method="get">
+        <label for="login-name">Name</label>
+        <input type="text" id="login-name" placeholder="Your name" required>
+
+        <label for="login-email">Email</label>
+        <input type="email" id="login-email" placeholder="you@example.com" required>
+
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" placeholder="At least 6 characters" minlength="6" required>
+
+        <button class="btn" type="submit">Log in</button>
+      </form>
+
+      <a class="back-link" href="index.html">&larr; Back to HOKU Crafts</a>
+    </div>
+  </div>
+
+</body>
+</html>
